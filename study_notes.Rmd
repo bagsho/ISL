@@ -1,0 +1,26 @@
+---
+title: "Introduction to Statistical Learning Study Notes"
+author: "Orhan Aktas"
+date: '2022-04-19'
+output:   
+    html_document:
+      toc: yes
+      number_sections: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  class.source = "bg-warning text-warning"
+)
+```
+
+```{r libraries, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ISLR2)
+
+```
+
+# Introduction
