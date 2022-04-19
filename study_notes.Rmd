@@ -24,3 +24,47 @@ library(ISLR2)
 ```
 
 # Introduction
+
+# Statistical Learning
+
+## What Is Statistical Learning?
+
+### Why Estimate f?
+
+There are two main reasons that we may wish to estimate f:
+
+1.  prediction
+
+2.  inference
+
+#### Prediction
+
+In many situations, a set of inputs X are readily available, but the output Y cannot be easily obtained. In this setting, since the error term averages to zero, we can predict Y using $\hat{Y} = \hat{f}(X)$.
+
+#### Inference
+
+We are often interested in understanding the association between Y and X. In this situation we wish to estimate f, but our goal is to know its exact form.
+
+-   Which predictors are associated with the response?
+
+-   What is the relationship between the response and each predictor?
+
+-   Can the relationship between Y and each predictor be adequately summarized using a linear equation, or is the relationship more complicated?
+
+#### Practical Uses
+
+In this book, we will see a number of examples that fall into the prediction setting, the inference setting, or a combination of the two.
+
+##### Modeling for prediction
+
+For instance, consider a company that is interested in conducting a direct-marketing campaign. The goal is to identify individuals who are likely to respond positively to a mailing, based on observations of demographic variables measured on each individual. In this case, the demographic variables serve as predictors, and response to the marketing campaign (either positive or negative) serves as the outcome. The company is not interested in obtaining a deep understanding of the relationships between each individual predictor and the response; instead, the company simply wants to accurately predict the response using the predictors.
+
+##### Modeling for inference
+
+Another example involves modeling the brand of a product that a customer might purchase based on variables such as price, store location, discount levels, competition price, and so forth. In this situation one might really be most interested in the association between each variable and the probability of purchase. For instance, to what extent is the product's price associated with sales?
+
+##### Modeling both for prediction and inference
+
+Finally, some modeling could be conducted both for prediction and inference. For example, in a real estate setting, one may seek to relate values of homes to inputs such as crime rate, zoning, distance from a river, air quality, schools, income level of community, size of houses, and so forth. In this case one might be interested in the association between each individual input variable and housing price---for instance, how much extra will a house be worth if it has a view of the river? This is an *inference* problem. Alternatively, one may simply be interested in predicting the value of a home given its characteristics: is this house under- or over-valued? This is a *prediction* problem.
+
+### How Do We Estimate f?
