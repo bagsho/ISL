@@ -3,9 +3,10 @@ title: "Introduction to Statistical Learning Study Notes"
 author: "Orhan Aktas"
 date: '2022-04-19'
 output:   
-    html_document:
+    html_document: 
       toc: yes
       number_sections: yes
+      theme: journal
 ---
 
 ```{r setup, include=FALSE}
@@ -55,25 +56,21 @@ We are often interested in understanding the association between Y and X. In thi
 
 In this book, we will see a number of examples that fall into the prediction setting, the inference setting, or a combination of the two.
 
-##### Modeling for prediction
+##### Modeling for prediction {.unnumbered}
 
 For instance, consider a company that is interested in conducting a direct-marketing campaign. The goal is to identify individuals who are likely to respond positively to a mailing, based on observations of demographic variables measured on each individual. In this case, the demographic variables serve as predictors, and response to the marketing campaign (either positive or negative) serves as the outcome. The company is not interested in obtaining a deep understanding of the relationships between each individual predictor and the response; instead, the company simply wants to accurately predict the response using the predictors.
 
-##### Modeling for inference
+##### Modeling for inference {.unnumbered}
 
 Another example involves modeling the brand of a product that a customer might purchase based on variables such as price, store location, discount levels, competition price, and so forth. In this situation one might really be most interested in the association between each variable and the probability of purchase. For instance, to what extent is the product's price associated with sales?
 
-##### Modeling both for prediction and inference
+##### Modeling both for prediction and inference {.unnumbered}
 
 Finally, some modeling could be conducted both for prediction and inference. For example, in a real estate setting, one may seek to relate values of homes to inputs such as crime rate, zoning, distance from a river, air quality, schools, income level of community, size of houses, and so forth. In this case one might be interested in the association between each individual input variable and housing price---for instance, how much extra will a house be worth if it has a view of the river? This is an *inference* problem. Alternatively, one may simply be interested in predicting the value of a home given its characteristics: is this house under- or over-valued? This is a *prediction* problem.
 
 ### How Do We Estimate f?
 
-Our goal is to apply a statistical learning method to the training data in order to estimate the unknown function f. In other words, we want to find a function $\hat{f}$such that $\hat{Y} 
-
-\sim
-
- \hat{f}(X)$ for any observation (X, Y). Broadly speaking, most statistical learning methods for this task can be characterized as either parametric or non-parametric. We now briefly discuss these two types of approaches.
+Our goal is to apply a statistical learning method to the training data in order to estimate the unknown function f. In other words, we want to find a function $\hat{f}$such that $\hat{Y}\sim\hat{f}(X)$ for any observation (X, Y). Broadly speaking, most statistical learning methods for this task can be characterized as either parametric or non-parametric. We now briefly discuss these two types of approaches.
 
 #### Parametric methods
 
@@ -91,10 +88,10 @@ Non-parametric methods do not make explicit assumptions about the functional for
 
 major advantage over parametric approaches:
 
-| [by avoiding the assumption of a particular functional form for f, they have the potential to accurately fit a wider range of possible shapes for f.]{.underline}
+-   by avoiding the assumption of a particular functional form for f, they have the potential to accurately fit a wider range of possible shapes for f.
 
 major disadvantage:
 
-| [since they do not reduce the problem of estimating f to a small number of parameters, a very large number of observations (far more than is typically needed for a parametric approach) is required in order to obtain an accurate estimate for f.]{.underline}
+-   since they do not reduce the problem of estimating f to a small number of parameters, a very large number of observations (far more than is typically needed for a parametric approach) is required in order to obtain an accurate estimate for f.
 
 ### The Trade-Off Between Prediction Accuracy and Model Interpretability
